@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080812">
+
+<title>10K Boost — Grow Your Audience</title>
+<meta name="description" content="Discover tools to grow your social media audience with 10K Boost. Download the Android app.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080812;
+    --card: #111120;
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+    --text: #f8fafc;
+    --muted: #a1a1b5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1180px;
+    padding: 0 24px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #c084fc;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-button {
+    padding: 12px 18px;
+    background: white;
+    color: #111;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 690px;
+    max-width: 1180px;
+    margin: auto;
+    padding: 90px 24px 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 9px 14px;
+    border: 1px solid #3a2858;
+    background: #191128;
+    color: #d8b4fe;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 26px;
+}
+
+h1 {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.04;
+    letter-spacing: -3px;
+    margin-bottom: 24px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #c084fc, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 520px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.btn {
+    padding: 16px 23px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    color: white;
+    background: linear-gradient(100deg, #7c3aed, #db2777);
+    box-shadow: 0 10px 35px #9333ea35;
+}
+
+.btn-secondary {
+    border: 1px solid #39394d;
+    background: #151522;
+}
+
+.small-note {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #77778d;
+}
+
+.visual {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.glow {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background: #8b5cf6;
+    filter: blur(130px);
+    opacity: .28;
+    border-radius: 50%;
+}
+
+.phone {
+    width: 270px;
+    padding: 13px;
+    border-radius: 36px;
+    border: 1px solid #49405f;
+    background: linear-gradient(145deg, #262137, #10101c);
+    box-shadow: 0 35px 100px #0009;
+    position: relative;
+    transform: rotate(-5deg);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-14px) rotate(-3deg); }
+}
+
+.screen {
+    background: #0c0c17;
+    border-radius: 25px;
+    padding: 27px 17px;
+    min-height: 400px;
+}
+
+.app-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: #d4d4e8;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile h3 {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+.profile p {
+    font-size: 11px;
+    margin: 7px auto;
+    color: #9292a9;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    text-align: center;
+    padding: 12px 3px;
+    border: 1px solid #29263e;
+    border-radius: 10px;
+    background: #171526;
+}
+
+.stat strong {
+    display: block;
+    font-size: 16px;
+    color: #d8b4fe;
+}
+
+.stat span {
+    display: block;
+    color: #9996ae;
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+.progress-card {
+    background: #171526;
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid #29263e;
+}
+
+.progress-card p {
+    color: #a7a4bb;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.bar {
+    height: 7px;
+    background: #353047;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    width: 68%;
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    border-radius: 10px;
+}
+
+.float-card {
+    position: absolute;
+    right: -5px;
+    bottom: 55px;
+    padding: 17px 20px;
+    border: 1px solid #39304f;
+    border-radius: 15px;
+    background: #171526;
+    box-shadow: 0 15px 40px #0007;
+}
+
+.float-card strong {
+    font-size: 22px;
+    color: #d8b4fe;
+}
+
+.float-card p {
+    font-size: 11px;
+    color: #aaa7be;
+    margin-top: 5px;
+}
+
+section {
+    padding: 90px 24px;
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #151523, #10101a);
+    border: 1px solid #28283b;
+    transition: .25s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    border-color: #7652ad;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    border-radius: 14px;
+    background: #382354;
+    margin-bottom: 23px;
+}
+
+.feature h3 {
+    margin-bottom: 13px;
+    font-size: 19px;
+}
+
+.feature p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.download-section {
+    background:
+        radial-gradient(ellipse at 50% 100%, #602b9933, transparent 65%);
+}
+
+.download-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 65px 25px;
+    border: 1px solid #403057;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #171426, #0e0e19);
+}
+
+.download-box h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 18px;
+}
+
+.download-box p {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.download-box .buttons {
+    justify-content: center;
+}
+
+footer {
+    border-top: 1px solid #222233;
+    padding: 30px 24px;
+    color: #88889d;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2;
+}
+
+footer a {
+    color: #d8b4fe;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 65px;
+        gap: 20px;
+    }
+
+    .hero p {
+        margin: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .visual {
+        min-height: 460px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links .optional {
+        display: none;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .float-card {
+        right: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#" class="logo">10K<span>BOOST.</span></a>
+
+    <div class="nav-links">
+        <a class="optional" href="#features">Features</a>
+        <a class="optional" href="#about">About</a>
+        <a href="#download" class="nav-button">Get App ↓</a>
+    </div>
+</nav>
+
+<main>
+    <section class="hero" id="about">
+
+        <div class="hero-content">
+            <span class="tag">✦ YOUR SOCIAL GROWTH JOURNEY</span>
+
+            <h1>
+                Turn Your<br>
+                Dreams Into<br>
+                <span class="gradient">10K Goals.</span>
+            </h1>
+
+            <p>
+                Take your social media game to the next level.
+                Discover growth tips, track your progress, and
+                build an audience with a smarter strategy.
+            </p>
+
+            <div class="buttons">
+                <a href="./10k-followers.apk"
+                   class="btn btn-primary" download>
+                    ⬇ Download APK
+                </a>
+
+                <a href="#features" class="btn btn-secondary">
+                    Explore Features →
+                </a>
+            </div>
+
+            <div class="small-note">
+                Android app · APK installation required
+            </div>
+        </div>
+
+        <div class="visual">
+            <div class="glow"></div>
+
+            <div class="phone">
+                <div class="screen">
+                    <div class="app-top">
+                        <strong>10K BOOST</strong>
+                        <span>● Online</span>
+                    </div>
+
+                    <div class="profile">
+                        <div class="avatar">🚀</div>
+                        <h3>Creator Dashboard</h3>
+                        <p>Your journey starts here</p>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <strong>10K</strong>
+                            <span>GOAL</span>
+                        </div>
+                        <div class="stat">
+                            <strong>24/7</strong>
+                            <span>IDEAS</span>
+                        </div>
+                        <div class="stat">
+                            <strong>100%</strong>
+                            <span>EFFORT</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <p>✦ Your next milestone</p>
+                        <div class="bar"><div></div></div>
+                        <p style="margin:12px 0 0">
+                            Keep creating. Keep growing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="float-card">
+                <strong>10K ✦</strong>
+                <p>Dream big. Grow smart.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="features">
+        <div class="section-inner">
+
+            <div class="section-heading">
+                <h2>Everything You Need to <span class="gradient">Grow</span></h2>
+                <p>Tools and ideas to help you become a better creator.</p>
+            </div>
+
+            <div class="features">
+                <article class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Growth Strategies</h3>
+                    <p>
+                        Learn practical content strategies, posting
+                        habits, and ways to reach your target audience.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Track Your Goals</h3>
+                    <p>
+                        Set milestones, monitor your progress, and
+                        stay focused on your creator journey.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Creator Toolkit</h3>
+                    <p>
+                        Explore content ideas, caption inspiration,
+                        and engagement tips for your next post.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="download-section" id="download">
+        <div class="download-box">
+            <span class="tag">READY TO LEVEL UP?</span>
+
+            <h2>Your <span class="gradient">10K Journey</span><br>Starts Here.</h2>
+
+            <p>
+                Get the Android app and start exploring tools
+                designed to help you build your audience.
+                Results depend on your content and audience;
+                10,000 followers are not guaranteed.
+            </p>
+
+            <div class="buttons">
+                <a href="./10k-followers.apk"
+                   class="btn btn-primary" download>
+                    ⬇ Download for Android
+                </a>
+            </div>
+
+            <div class="small-note">
+                Only install APK files from sources you trust.
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p><strong>10K BOOST.</strong> — Create. Connect. Grow.</p>
+    <p>
+        This is an independent app website and is not affiliated
+        with Instagram, TikTok, or other social platforms.
+    </p>
+    <p>© <span id="year"></span> 10K Boost. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
